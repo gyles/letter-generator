@@ -16,9 +16,9 @@ pipeline {
         }
         stage('Checkout') {
 	        steps {
-	        	git branch: 'master', 
+	        	git url: 'git@github.com:gyles/letter-generator.git',
         		credentialsId: 'Jenkins',
-        		url: 'ssh://git@github.com:gyles/letter-generator.git'
+        		branch: 'master'
 	        }
         }
         stage('Build') {
